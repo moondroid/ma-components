@@ -1051,6 +1051,14 @@ public class FeatureCoverFlow extends EndlessLoopAdapterContainer implements Vie
 	}
 	
 	@Override
+	public boolean dispatchKeyEvent(KeyEvent event) {
+	    if ((KeyEvent.KEYCODE_DPAD_UP == event.getKeyCode() || KeyEvent.KEYCODE_DPAD_DOWN == event.getKeyCode())) {
+		    //handle key events here
+	    }
+	    return super.dispatchKeyEvent(event);
+	}
+	
+	@Override
 	public boolean dispatchTouchEvent(MotionEvent ev) {
 		final int action = ev.getAction();
         final float xf = ev.getX();
